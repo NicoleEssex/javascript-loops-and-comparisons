@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hard-Loop</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+
+//Goal: to print values from an array to the console and alerts the user that the word starts with a "c" or an "o".
+    //I have included the code that shows each step hard coded first then gradually replacing the hard coded values with ones stored in variables. Lastly, all the hard coded step are turned into dynamically generated steps with results.
+
+//----------------------------------------------------------------------------------------------------------------
+//Create a GLOBAL variable of an array of strings.
+var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+//---------------------------------------------HARD-CODED-------------------------------------------------------------------
+//Print those values to the console (hard-coded).
+console.log(myFarm[0]);
+console.log(myFarm[1]);
+console.log(myFarm[3]);
+console.log(myFarm[4]);
+
+//Check for first letter in string literal string.
+console.log("chickens".charAt(0));
+
+//REPLACE string literal with it's string variable. 
+console.log(myFarm[0].charAt(0)); 
+
+//Check if first letter of string literal starts with a letter c or o and alert user if word does, or console log that it doesn't.
+if ("chickens".charAt(0) === "c" || "chickens".charAt(0) === "o") {
+    alert("Starts with 'c' or 'o'!");
+} else {
+    console.log("Does not start with 'c' or 'o'");
+}
+//REPLACE string literal with it's string variable and check if first letter starts with a c or o and alert user if it does, or console log that it doesn't.
+if (myFarm[0].charAt(0) === "c" || myFarm[0].charAt(0) === "o") {
+    alert("Starts with 'c' or 'o'!" + " variable");
+} else {
+    console.log("Does not start with 'c' or 'o'");
+}
+
+//----------------------------------------------DYNAMICALLY CODED------------------------------------------------------------------
+//Print those values to the console (dynamically).
+//Print the for first letter for each word in the array.
+//Compare first letter of each word to "c" or "o".
+//Alert or console.log the results of comparisons.
+for (var i = 0; i < myFarm.length; i++) {
+    console.log(myFarm[i]);
+    console.log(myFarm[i].charAt(0));
+    if ((myFarm[i].charAt(0)) === "c" || ((myFarm[i].charAt(0)) === "o") ) {
+        alert("Starts with 'c' or 'o' "+" dynamically from array " + myFarm[i]);
+    } else {
+        console.log("Does not start with 'c' or 'o'");
+    }
+}
